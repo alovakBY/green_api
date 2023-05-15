@@ -1,19 +1,38 @@
 import api from '@/api/config.js'
 
-export const login = async (idInstance, apiTokenInstance) => {
-   try {
-      const data = await api.get(
-         `https://api.green-api.com/waInstance${idInstance}/getStatusInstance/${apiTokenInstance}`,
-      )
-
-      return data
-   } catch (e) {
-      return e
-   }
+export const login = (idInstance, apiTokenInstance) => {
+   return api.get(
+      `https://api.green-api.com/waInstance${idInstance}/getStatusInstance/${apiTokenInstance}`,
+   )
 }
 
-export const getNewsItem = async (id) => {
-   const { data } = await api.get(`item/${id}.json`)
+export const createChat = (idInstance, apiTokenInstance, phone) => {
+   return api.post(
+      `https://api.green-api.com/waInstance${idInstance}/CheckWhatsapp/${apiTokenInstance}`,
+      {
+         phoneNumber: phone,
+      },
+   )
+}
 
-   return data
+export const getMessage = (idInstance, apiTokenInstance) => {
+   return api.get(
+      `https://api.green-api.com/waInstance${idInstance}/ReceiveNotification/${apiTokenInstance}`,
+   )
+}
+
+export const deleteMessage = (idInstance, apiTokenInstance, receiptId) => {
+   return api.delete(
+      `https://api.green-api.com/waInstance${idInstance}/DeleteNotification/${apiTokenInstance}/${receiptId}`,
+   )
+}
+
+export const sendMessage = (idInstance, apiTokenInstance, chatId, message) => {
+   return api.post(
+      `https://api.green-api.com/waInstance${idInstance}/SendMessage/${apiTokenInstance}`,
+      {
+         chatId,
+         message,
+      },
+   )
 }

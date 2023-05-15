@@ -1,15 +1,15 @@
 import React from 'react'
 
-import { Container } from '@/components/Container/Container.jsx'
+import { LogoIcon } from '@/static/icons/index.jsx'
 
-import classes from './header.module.scss'
+import classes from './Header.module.scss'
 
 export const Header = () => {
    return (
       <div className={classes.header}>
-         <Container>
-            <div className={classes.wrapper}>Header</div>
-         </Container>
+         <div className={classes.before}></div>
+         <LogoIcon className={classes.logo} />
+         <div>GREEN API</div>
       </div>
    )
 }

@@ -1,0 +1,80 @@
+.message {
+	width: max-content;
+
+	padding: 10px;
+  
+	color: #111B21;
+
+	background-color: #00A884;
+	box-shadow: 0 1px 0.5px rgba(11,20,26,.13);
+
+	& + & {
+		margin-top:20px
+	}
+}
+
+.textWrapper {
+	display: flex;
+	align-items: center;
+
+	padding: 5px 16px;
+
+	background-color: #F0F2F5;
+	
+	& > button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 40px;
+		min-width: 40px;
+		min-height: 52px;
+		padding: 5px 0;
+
+		color: #54656F;
+	}
+}
+
+.messageWrapper {
+	margin-bottom:12px;
+}
+
+.input {
+	width: 100%;
+	margin: 5px 8px;
+	padding: 9px 12px;
+
+	border: 1px solid #FFF;
+	border-radius: 8px;
+	background-color: #FFF;
+}
+
+.outgoing {
+	margin-left: auto;
+
+	border-radius: 20px 10px 10px 20px;
+
+	background-color: #D9FDD3;
+}
+
+.incoming {
+	border-radius: 10px 20px 20px 10px;
+	background-color: #FFF;
+}
+
+.messages {
+	overflow-y: auto;
+
+	height: 500px;
+	padding: 64px 64px 40px;
+
+	background-color: #EFEAE2
+}
+
+.error {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+
