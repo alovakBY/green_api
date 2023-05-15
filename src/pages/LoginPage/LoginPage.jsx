@@ -8,8 +8,8 @@ import { useUserStore } from '@/store/index.js'
 import classes from './login-page.module.scss'
 
 export const LoginPage = () => {
-   const [idInstance, setIdInstance] = useState()
-   const [apiTokenInstance, setApiTokenInstance] = useState()
+   const [idInstance, setIdInstance] = useState('')
+   const [apiTokenInstance, setApiTokenInstance] = useState('')
 
    const { isAuth, error, loading, login } = useUserStore()
 

@@ -8,7 +8,7 @@ import { usePhoneStore, useUserStore } from '@/store/index.js'
 import classes from './home-page.module.scss'
 
 export const HomePage = () => {
-   const [phoneNumber, setPhoneNumber] = useState()
+   const [phoneNumber, setPhoneNumber] = useState('')
    const { idInstance, apiTokenInstance } = useUserStore()
    const { chatId, error, loading, getChat } = usePhoneStore()
    const navigate = useNavigate()

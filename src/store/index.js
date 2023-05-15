@@ -56,7 +56,7 @@ export const usePhoneStore = create((set) => ({
             )
          }
       } catch (error) {
-         set({ loading: false, error: error.message })
+         set({ loading: false, error: error.message || 'Error. Try again' })
       } finally {
          set({ loading: false })
       }
